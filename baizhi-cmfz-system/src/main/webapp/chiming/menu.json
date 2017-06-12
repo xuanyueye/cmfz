@@ -1,0 +1,39 @@
+[
+  {
+    "id": "21",
+    "name": "系统管理",
+    "iconCls": "icon-bullet_wrench",
+    "href": "",
+    "children": [
+      {
+        "id": "21",
+        "name": "日志管理",
+        "iconCls": "icon-database_yellow",
+        "href": "index.jsp"
+      },
+      {
+        "id": "21",
+        "name": "数据备份",
+        "iconCls": "icon-medal_bronze_2",
+        "href": "index.jsp"
+      }
+
+    ]
+  },
+  {
+    "id": "22",
+    "name": "用户管理",
+    "iconCls": "icon-user_gray_cool",
+    "href": "",
+    "children": [
+      {
+        "id": "21",
+        "name": "查看用户信息",
+        "iconCls": "icon-user_female",
+        "href": "/manager/user/userList.jsp"
+      }
+    ]
+  }
+]
+
+

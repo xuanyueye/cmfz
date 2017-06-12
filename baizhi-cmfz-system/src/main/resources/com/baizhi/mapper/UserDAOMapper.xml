@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.UserDAO">
+	<sql id="userSql">
+		 id,name,age,birthday
+	</sql>
+	<!-- 查所有 -->
+  	<select id="selectAllUser" resultType="com.baizhi.entity.User">
+  		select <include refid="userSql"/>from user 
+  	</select>
+  	<!-- 查一个 -->
+  	<select id="selectOneUser" parameterType="String" resultType="user">
+  		select <include refid="userSql"/>from user where id=#{id}
+  	</select>
+  	
+  	<!-- 添加一个 -->
+  	<insert id="insertOneUser" parameterType="user">
+  		insert into user values(#{id},#{name},#{age},#{birthday})
+  	</insert>
+  	
+  	<!-- 修改员工信息 -->
+  	<update id="updateUser" parameterType="user">
+  		update  user set name=#{name},age=#{age},birthday=#{birthday} where id=#{id}
+  	</update>
+  	
+  	<!-- 删除员工 -->
+  	<delete id="deleteUser" parameterType="String">
+  		delete from user where id=#{id}
+  	</delete>
+</mapper>
